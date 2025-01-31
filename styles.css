@@ -1,0 +1,109 @@
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.animate-fadeIn {
+    animation: fadeIn 1s ease-in;
+}
+
+.splide {
+    padding: 2rem 0;
+}
+
+.project-slide {
+    padding: 1rem;
+}
+
+
+.project-card {
+    width: 300px;
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: #f8fafc;
+    padding: 2rem;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+.infinite-scroll {
+    animation: scroll 30s linear infinite;
+    width: calc(300% + 6rem);
+}
+
+/* Custom Splide arrow styles */
+.splide__arrow {
+    background: white;
+    opacity: 1;
+    width: 3rem;
+    height: 3rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.splide__arrow--prev {
+    left: 10px; /* Adjust as needed */
+}
+
+.splide__arrow--next {
+    right: 10px; /* Adjust as needed */
+}
+
+.splide__arrow:hover {
+    background: #f8fafc;
+}
+
+.splide__arrow svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: #4b5563;
+}
+
+/* Custom pagination styles */
+.splide__pagination__page {
+    background: #e5e7eb;
+    opacity: 1;
+}
+
+.splide__pagination__page.is-active {
+    background: #3b82f6;
+    transform: scale(1.2);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 30s linear infinite;
+} 

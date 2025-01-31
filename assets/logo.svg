@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <!-- Main text -->
+  <text x="60" y="40" font-family="Arial" font-weight="700" font-size="32" fill="#1E40AF">
+    extensa
+  </text>
+  
+  <!-- Icon - abstract representation of iterative growth -->
+  <g transform="translate(10, 15)">
+    <!-- Three curved lines representing growth and iteration -->
+    <path d="M0 30 Q 20 30, 20 15 Q 20 0, 40 0" 
+          fill="none" 
+          stroke="#2563EB" 
+          stroke-width="3"
+          stroke-linecap="round"/>
+    
+    <path d="M5 25 Q 25 25, 25 12 Q 25 -2, 42 -2" 
+          fill="none" 
+          stroke="#3B82F6" 
+          stroke-width="3"
+          stroke-linecap="round"/>
+    
+    <path d="M10 20 Q 30 20, 30 9 Q 30 -4, 44 -4" 
+          fill="none" 
+          stroke="#60A5FA" 
+          stroke-width="3"
+          stroke-linecap="round"/>
+  </g>
+</svg>
