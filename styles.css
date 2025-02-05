@@ -1,28 +1,32 @@
-/* Custom animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-.animate-fadeIn {
-    animation: fadeIn 1s ease-in;
+/* Remove all Splide/Swiper related CSS as we're using pure CSS animation */
+
+.overflow-hidden {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
-.splide {
-    padding: 2rem 0;
+.infinite-scroll {
+    display: flex;
+    width: fit-content;
 }
 
-.project-slide {
-    padding: 1rem;
+.slides-container {
+    display: flex;
+    flex-shrink: 0;
 }
-
 
 .project-card {
     width: 300px;
+    margin: 0 1rem;
     background: white;
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .project-card:hover {
@@ -38,72 +42,48 @@
     padding: 2rem;
 }
 
-.project-info {
-    padding: 1.5rem;
-}
-
-.project-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-}
-.infinite-scroll {
-    animation: scroll 30s linear infinite;
-    width: calc(300% + 6rem);
-}
-
-/* Custom Splide arrow styles */
-.splide__arrow {
-    background: white;
-    opacity: 1;
-    width: 3rem;
-    height: 3rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 60%;
-    transform: translateY(-50%);
-    z-index: 10;
-}
-
-.splide__arrow--prev {
-    left: 10px; /* Adjust as needed */
-}
-
-.splide__arrow--next {
-    right: 10px; /* Adjust as needed */
-}
-
-.splide__arrow:hover {
-    background: #f8fafc;
-}
-
-.splide__arrow svg {
-    width: 1.2rem;
-    height: 1.2rem;
-    fill: #4b5563;
-}
-
-/* Custom pagination styles */
-.splide__pagination__page {
-    background: #e5e7eb;
-    opacity: 1;
-}
-
-.splide__pagination__page.is-active {
-    background: #3b82f6;
-    transform: scale(1.2);
-}
-
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-33.333%);
     }
 }
 
-.animate-scroll {
+.infinite-scroll {
     animation: scroll 30s linear infinite;
-} 
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .project-card {
+        width: 200px;
+        margin: 0 0.5rem;
+    }
+    
+    .project-image {
+        height: 150px;
+        padding: 1.5rem;
+    }
+    
+    .infinite-scroll {
+        animation-duration: 20s;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        width: 150px;
+        margin: 0 0.25rem;
+    }
+    
+    .project-image {
+        height: 100px;
+        padding: 1rem;
+    }
+    
+    .infinite-scroll {
+        animation-duration: 23s;
+    }
+}
